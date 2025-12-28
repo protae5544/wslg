@@ -4,6 +4,7 @@
 
 ### New Files Created (8 files)
 
+
 #### Implementation
 ```
 ✅ WSLGd/trace.h
@@ -15,7 +16,8 @@
 ```
 
 #### Documentation (7 files)
-```
+
+```plaintext
 ✅ docs/TRACING_INDEX.md (7,643 bytes)
    - Master index and navigation guide
    - Quick start instructions
@@ -66,7 +68,7 @@
 
 ### Modified Files (2 files)
 
-```
+```plaintext
 ✅ WSLGd/common.h
    Changes:
    - Added LOG_LEVEL_TRACE (level 1)
@@ -88,7 +90,7 @@
 ## 📊 Statistics
 
 | Metric | Value |
-|--------|-------|
+| ------ | ----- |
 | **New Files** | 8 |
 | **Modified Files** | 2 |
 | **Total Lines Added** | ~800 |
@@ -103,6 +105,7 @@
 ## 🎯 Key Features Implemented
 
 ### ✅ Five Log Levels
+
 - TRACE (level 1) - Most verbose
 - DEBUG (level 2) - Diagnostic
 - EXCEPTION (level 3) - Exceptions
@@ -110,6 +113,7 @@
 - INFO (level 5) - Information (default)
 
 ### ✅ Logging Macros
+
 - `LOG_TRACE()` - Trace level logging
 - `LOG_DEBUG()` - Debug level logging
 - `LOG_ERROR()` - Error logging
@@ -117,6 +121,7 @@
 - `LogException()` - Exception logging
 
 ### ✅ Tracing Helpers
+
 - `TRACE_ENTRY()` - Function entry
 - `TRACE_EXIT()` - Function exit
 - `TRACE_CALL()` - Function call
@@ -125,6 +130,7 @@
 - `TRACE_PTR()` - Pointer value
 
 ### ✅ Configuration
+
 - Runtime environment variable support
 - Component-based filtering
 - Trace file output
@@ -187,28 +193,36 @@
 ## 🚀 Usage Scenarios Covered
 
 ### Scenario 1: Simple Debugging
+
 ```bash
 export WSLG_TRACE_ENABLED=1
 export WSLG_TRACE_LEVEL=1
 ```
+
 → See all function calls and values
 
 ### Scenario 2: Component Debugging
+
 ```bash
 export WSLG_TRACE_COMPONENTS=ProcessMonitor
 ```
+
 → Focus on specific component
 
 ### Scenario 3: Error Investigation
+
 ```bash
 export WSLG_TRACE_LEVEL=3
 ```
+
 → See errors and exceptions only
 
 ### Scenario 4: Performance Testing
+
 ```bash
 export WSLG_TRACE_FILE=/mnt/wslg/trace.log
 ```
+
 → Save traces for analysis
 
 ---
@@ -216,6 +230,7 @@ export WSLG_TRACE_FILE=/mnt/wslg/trace.log
 ## 🔧 Integration Points
 
 ### Files That Use Tracing
+
 - ✅ WSLGd/main.cpp - Can use LOG_INFO, LOG_ERROR
 - ✅ WSLGd/ProcessMonitor.cpp - Can add TRACE_ENTRY/EXIT
 - ✅ WSLGd/FontMonitor.cpp - Can add trace calls
@@ -223,6 +238,7 @@ export WSLG_TRACE_FILE=/mnt/wslg/trace.log
 - ✅ WSLDVCPlugin/WSLDVCCallback.cpp - Can add traces
 
 ### Build Systems Covered
+
 - ✅ CMake configuration
 - ✅ Meson configuration
 - ✅ Docker builds
@@ -233,6 +249,7 @@ export WSLG_TRACE_FILE=/mnt/wslg/trace.log
 ## 📋 Implementation Checklist
 
 ### For Using Tracing
+
 - [x] Infrastructure implemented
 - [x] Documentation complete
 - [x] Examples provided
@@ -243,6 +260,7 @@ export WSLG_TRACE_FILE=/mnt/wslg/trace.log
 - [ ] Test with real workloads (next step)
 
 ### For Each File
+
 - [ ] Add TRACE_ENTRY() at start
 - [ ] Add TRACE_EXIT() at end
 - [ ] Log parameters
@@ -303,6 +321,7 @@ To see how to add tracing, check:
 ## 🎯 Success Criteria Met
 
 ✅ **Feature Complete** - All tracing capabilities implemented
+
 ✅ **Well Documented** - 6 comprehensive documentation files
 ✅ **Example Rich** - 15+ practical code examples
 ✅ **Build Ready** - CMake, Meson, Docker integration
